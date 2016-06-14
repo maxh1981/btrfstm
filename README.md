@@ -20,15 +20,15 @@ $ python3 setup.py install
 
 Keep Hourly snapshots for 3 days.
 ```
-0 * * * * btrfstm --working-dir=/data --name=dropbox --snapshot-prefix=hourly --count=72
+0 * * * * /usr/local/bin/btrfstm --working-dir=/data --name=dropbox --snapshot-prefix=hourly --count=72
 ```
 
 Keep Daily snapshots for a month.
 ```
-0 2 * * * btrfstm --working-dir=/data --name=dropbox --snapshot-prefix=daily --count=31
+0 2 * * * /usr/local/bin/btrfstm --working-dir=/data --name=dropbox --snapshot-prefix=daily --count=31
 ```
 
 Keep Monthly snapshots forever!
 ```
-0 2 1 * * btrfstm --working-dir=/data --name=dropbox --snapshot-prefix=monthly
+0 2 1 * * /usr/local/bin/btrfstm --working-dir=/data --name=dropbox --snapshot-prefix=monthly
 ```
